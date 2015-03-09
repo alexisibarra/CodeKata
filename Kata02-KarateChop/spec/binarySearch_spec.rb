@@ -12,6 +12,23 @@ describe BinarySearch do
   it "present in a single-element array" do
     expect(BinarySearch.chop(method, 3, [3])).to eq(0)
   end
+  it "not present in a 3-elements set" do
+    pending "It fails if looking for an element bigger than the biggest"
+    # expect(BinarySearch.chop(method, 7, [1, 3, 5])).to eq(-1)
+  end
+  it "not present in a 3-elements set" do
+    pending "It fails if looking for an element smaller than the smallest"
+    # expect(BinarySearch.chop(method, 1, [2, 3, 5])).to eq(-1)
+  end
+  it "present in the beginning of a 3-elements set" do
+    expect(BinarySearch.chop(method, 1, [1, 3, 5])).to eq(0)
+  end
+  it "present in the middle of a 3-elements set" do
+    expect(BinarySearch.chop(method, 3, [1, 3, 5])).to eq(1)
+  end
+  it "present in the middle of a 3-elements set" do
+    expect(BinarySearch.chop(method, 5, [1, 3, 5])).to eq(2)
+  end
 end
 
 describe 'BinarySearch#get_middle_point' do
@@ -28,10 +45,6 @@ end
 
 
 # def test_chop
-    # assert_equal(-1, Recursive.chop(3, []))
-#   assert_equal(0,  chop(1, [1]))
-#   #
-#   assert_equal(0,  chop(1, [1, 3, 5]))
 #   assert_equal(1,  chop(3, [1, 3, 5]))
 #   assert_equal(2,  chop(5, [1, 3, 5]))
 #   assert_equal(-1, chop(0, [1, 3, 5]))
