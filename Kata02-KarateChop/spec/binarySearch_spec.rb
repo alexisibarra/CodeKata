@@ -14,6 +14,19 @@ describe BinarySearch do
   end
 end
 
+describe 'BinarySearch#get_middle_point' do
+  it "single-element set" do
+    expect(BinarySearch.get_middle_point(3,3)).to eq 3
+  end
+  it "small set" do
+    expect(BinarySearch.get_middle_point(1,3)).to eq 2
+  end
+  it "even set" do
+    expect(BinarySearch.get_middle_point(11,40)).to eq 25
+  end
+end
+
+
 # def test_chop
     # assert_equal(-1, Recursive.chop(3, []))
 #   assert_equal(0,  chop(1, [1]))
