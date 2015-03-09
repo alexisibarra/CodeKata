@@ -1,14 +1,16 @@
-require_relative '../recursive'
+require_relative '../binarySearch'
 
-describe Recursive do
+describe BinarySearch do
+  let (:method) { 'recursive' }
+
   it "inspecting an empty array" do
-    expect(Recursive.chop(3, [])).to eq(-1)
+    expect(BinarySearch.chop(method, 3, [])).to eq(-1)
   end
   it "not present in a single-element array" do
-    expect(Recursive.chop(3, [1])).to eq(-1)
+    expect(BinarySearch.chop(method, 3, [1])).to eq(-1)
   end
   it "present in a single-element array" do
-    expect(Recursive.chop(3, [3])).to eq(0)
+    expect(BinarySearch.chop(method, 3, [3])).to eq(0)
   end
 end
 
