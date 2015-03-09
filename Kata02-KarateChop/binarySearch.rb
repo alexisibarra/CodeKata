@@ -6,7 +6,7 @@ class BinarySearch
 
     case method
     when 'recursive'
-      self.recursive(value, 0, arr.length, arr)
+      self.recursive(value, 0, arr.length-1, arr)
     end
   end
 
